@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "LowBudgetFont";
+  src: local("LowBudgetFont"), url("./fonts/LowBudgetFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GoldenCoast";
+  src: local("GoldenCoast"), url("./fonts/GoldenCoast.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "AnandaBlack";
+  src: local("AnandaBlack"), url('./fonts/AnandaBlack.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NightForest';
+  src: local('NightForest'), url('./fonts/NightForest.otf') format('opentype');
+}

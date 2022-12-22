@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import switchOn from '../assets/switchOn.png'
-import switchOff from '../assets/switchOff.png'
+import SwitchOff from '../assets/SwitchOff.png'
 import lightOn from '../assets/lightOn.png'
 import lightOff from '../assets/lightOff.png'
 
@@ -29,14 +29,14 @@ const LightSwitch = () => {
         <div 
           onClick={turnLight} 
           className="lightbulb" 
-          style={{backgroundImage: lightSwitchStatus ? 'url(' + switchOn + ')' : 'url(' + switchOff + ')', backgroundSize: 'contain'}}
+            style={{backgroundImage: lightSwitchStatus ? 'url(' + switchOn + ')' : 'url(' + SwitchOff + ')', backgroundSize: 'contain', borderColor: lightSwitchStatus ? 'rgb(246, 239, 160)' : 'rgb(40, 42, 45)'}}
         >
-          {lightStatus}
+          {/* {lightStatus} */}
         </div>
 
         {!lightSwitchStatus && <div className="lightOffPic" style={{backgroundImage: 'url(' + lightOff + ')', backgroundSize: 'contain'}}></div>}
 
-        {lightSwitchStatus && <div className="lightOnPic" style={{backgroundImage: 'url(' + lightOn + ')', backgroundSize: 'contain'}}></div>}
+        {lightSwitchStatus && <div className="lightOnPic" style={{backgroundImage: 'url(' + lightOn + ')', backgroundSize: 'contain', boxShadow: lightSwitchStatus ? '0px 0px 70px 25px gold' : '0px'}}></div>}
       </div>
     </>
   )
