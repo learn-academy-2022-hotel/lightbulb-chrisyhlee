@@ -1,9 +1,95 @@
 h1 {
   text-align: center;
+  animation: backwards;
+  font-size: 50px;
+  color: gold;
 }
 
+html {
+  background-color: rgb(40, 42, 45);
+}
+
+/* .backGround {
+  border: 2px solid black;
+  height: 100%;
+
+  color: black
+} */
+
 .lightbulb {
+  display: inline-block;
+  /* justify-content: space-around; */
   border: 2px solid black;
   width: 200px;
   height: 200px;
+  /* position: relative; */
+  border-radius: 100px;
+  /* float: left; */
+  overflow: hidden;
+}
+
+.lightOffPic {
+  display: inline-block;
+  border: 2px solid gray;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.lightOnPic {
+  display: inline-block;
+  border: 2px solid rgb(246, 239, 160);
+  /* box-shadow: 120px 80px 40px 20px gold; */
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bulbWrap {
+  /* overflow: hidden; */
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.addRemoveButtons {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  /* display: inline-flex; */
+  /* text-decoration: dashed; */
+  /* font-size: 50px; */
+}
+
+.addButton {
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  /* overflow: hidden; */
+  border-radius: 100px;
+  background-color: gold;
+  font-family: 'NightForest';
+  font-size: 50px;
+  /* padding: 50px 0; */
+  line-height: 40px;
+}
+.removeButton {
+  border: 2px solid black;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: slategray;
+  color: gold;
+  font-family: 'NightForest';
+  font-size: 50px;
+  line-height: 45px;
+}
+
+.font-face-lbf {
+  font-family: "LowBudgetFont";
+}
+
+.font-face-gc {
+  font-family: 'GoldenCoast';
 }
