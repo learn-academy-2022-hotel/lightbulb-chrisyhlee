@@ -1,5 +1,9 @@
 import React from "react"
 import { useState } from "react"
+import switchOn from '../assets/switchOn.png'
+import switchOff from '../assets/switchOff.png'
+import lightOn from '../assets/lightOn.png'
+import lightOff from '../assets/lightOff.png'
 
 const LightSwitch = () => {
   const [lightSwitchStatus, setLightSwitchStatus] = useState(false)
@@ -21,11 +25,18 @@ const LightSwitch = () => {
 
   return (
     <>
-      <div 
-        onClick={turnLight} 
-        className="lightbulb" 
-        style={{backgroundColor: lightSwitchStatus ? 'yellow' : 'white'}}>
-        {lightStatus}
+      <div className="bulbWrap">
+        <div 
+          onClick={turnLight} 
+          className="lightbulb" 
+          style={{backgroundImage: lightSwitchStatus ? 'url(' + switchOn + ')' : 'url(' + switchOff + ')', backgroundSize: 'contain'}}
+        >
+          {lightStatus}
+        </div>
+
+        {!lightSwitchStatus && <div className="lightOffPic" style={{backgroundImage: 'url(' + lightOff + ')', backgroundSize: 'contain'}}></div>}
+
+        {lightSwitchStatus && <div className="lightOnPic" style={{backgroundImage: 'url(' + lightOn + ')', backgroundSize: 'contain'}}></div>}
       </div>
     </>
   )
